@@ -1,0 +1,40 @@
+/* Sidebar Design */
+
+.tcr-sidebar .widget-title:after {
+    content: "";
+    background: $primary;
+    height: 2px;
+    width: 50px;
+	margin-top: 15px;
+    display: block;
+    z-index: 1;
+}
+
+.tcr-sidebar .widget_archive ul, .tcr-sidebar .widget_categories ul, .tcr-sidebar .widget_meta ul, .tcr-sidebar .widget_recent_entries ul {
+    list-style: none;
+}
+
+.tcr-sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tcr-sidebar ul li {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.tcr-sidebar ul li+li {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.tcr-sidebar ul a {
+    color: #101010;
+    transition: all .3s ease 0s;
+}
+.tcr-sidebar a {
+    font-weight: 500;
+}

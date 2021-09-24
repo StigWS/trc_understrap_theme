@@ -1,0 +1,74 @@
+@import "pages/sidebar";
+@import "pages/blog";
+
+/* White line - right side on mobile fix */
+@media only screen and (max-width: 768px) {
+	html,
+	body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-table {
+		table {
+			width: 100%;
+		}
+
+		thead {
+			display: none;
+		}
+
+		tbody td {
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		tbody td:before {
+			content: attr(data-th);
+
+			display: block;
+
+			text-align: center;
+		}
+	}
+}
+
+/* multilevel navigation */
+@media (min-width: 992px) {
+	.dropdown-menu .dropdown-toggle:after {
+		border-top: 0.3em solid transparent;
+		border-right: 0;
+		border-bottom: 0.3em solid transparent;
+		border-left: 0.3em solid;
+	}
+	.dropdown-menu .dropdown-menu {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.dropdown-menu li {
+		position: relative;
+	}
+	.nav-item .submenu {
+		display: none;
+		position: absolute;
+		left: 100%;
+		top: -7px;
+	}
+	.nav-item .submenu-left {
+		right: 100%;
+		left: auto;
+	}
+	.dropdown-menu > li:hover {
+		background-color: #f1f1f1;
+	}
+	.dropdown-menu > li:hover > .submenu {
+		display: block;
+	}
+}
+
+.static-hero-widget p:empty {
+	display: none;
+}
